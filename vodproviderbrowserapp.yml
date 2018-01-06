@@ -1,0 +1,63 @@
+vodProviderBrowserApp:
+  Defaults:
+    Browse:
+      Amount:  25
+  Browse:
+    Title:
+    Amount:  25
+    Offset:  0
+    Total:  0
+    Table:  vodProvider
+    Class:  VodProvider
+    Alias:  vp
+    Columns:
+      # Note the cols will be shown in this sequence
+      # Add hidden columns
+      vodproviderid:
+        showLabel:  Id
+        sortable:  FALSE
+        searchable:  FALSE
+        colName:  vodproviderid
+        visible:  FALSE
+      vodprovideruniquecode:
+        showLabel:  Code
+        sortable:  TRUE
+        searchable:  TRUE
+        colname:  vodprovideruniquecode
+        visible:  TRUE
+        # The code will be the connector to the view/edit applet
+        islink:
+          callback:
+            function:  mk_link_vodProviderId
+            params:
+              vodProviderId
+      vodprovidername:
+        showLabel:  Name
+        sortable:  TRUE
+        searchable:  TRUE
+        colName:  vodprovidername
+        visible:  TRUE
+      vodProviderDescription:
+        showLabel:  Description
+        sortable:  FALSE
+        searchable:  FALSE
+        colName:  vodProviderDescription
+        visible:  TRUE
+      vodProviderAttributes:
+        showLabel:  Attributes
+        sortable:  FALSE
+        searchable:  FALSE
+        colName:  vodProviderAttributes
+        visible:  TRUE
+      movieMaxValidTimeInMonths:
+        showLabel:  MovieExp
+        sortable:  FALSE
+        searchable:  FALSE
+        colName:  movieMaxValidTimeInMonths
+        visible:  TRUE
+      canHaveZeroPrices:
+        showLabel:  ZeroPrice
+        sortable:  FALSE
+        searchable:  FALSE
+        colName:  canHaveZeroPrices
+        visible:  TRUE
